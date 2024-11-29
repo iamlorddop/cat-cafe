@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
+import clsx from "clsx";
 
 import styles from "./Button.module.css";
 
@@ -7,9 +8,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-export const Button: FC<ButtonProps> = ({ text, ...props }) => {
+/** Компонент кнопка */
+export const Button: FC<ButtonProps> = ({ text, className, ...props }) => {
+  const buttonCls = clsx(styles.button, className);
   return (
-    <button className={styles.button} {...props}>
+    <button className={buttonCls} {...props}>
       {text}
     </button>
   );

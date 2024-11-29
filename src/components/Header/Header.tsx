@@ -12,7 +12,9 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <Logo />
-        {location.pathname === "/" && <Button text="Купить билет" />}
+        {location.pathname === "/" && (
+          <Button text="Купить билет" className={styles.button} />
+        )}
       </div>
     </header>
   );

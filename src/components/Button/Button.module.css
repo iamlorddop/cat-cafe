@@ -1,5 +1,16 @@
 .button {
+	padding: 16px;
 	max-width: 460px;
+	height: 60px;
 	color: var(--white);
+	font: var(--text-bold);
+	background: var(--orange-30);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background .3s ease;
+}
+
+.button:hover,
+.button:active {
 	background: var(--orange-40);
 }

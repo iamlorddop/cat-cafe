@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #333333;
+  --light: #F6F6F6;
+  --white: #FFFFFF;
+  --orange-10: #FFF6D9;
+  --orange-20: #FFEEAD;
+  --orange-30: #FFB334;
+  --orange-40: #FF732B;
+  --green-40: #7FC92E;
+  --h1-text: 700 44px/50px;
+  --h2-text: 700 36px/42px;
+  --h3-text: 700 32px/36px;
+  --h4-text: 700 24px/28px;
+  --text-18: 400 18px/28px;
+  --text-bold: 700 18px/28px;
+  --text-14: 400 14px/18px;
+}
+
+button {
+  outline: 0;
+  border: 0;
+}

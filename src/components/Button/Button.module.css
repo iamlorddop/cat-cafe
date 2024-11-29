@@ -1,0 +1,5 @@
+.button {
+	max-width: 460px;
+	color: var(--white);
+	background: var(--orange-40);
+}

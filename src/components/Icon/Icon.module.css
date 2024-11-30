@@ -1,0 +1,14 @@
+.icon {
+	display: inline-block;
+	background-size: cover;
+}
+
+.iconM {
+	width: 24px;
+	height: 24px;
+}
+
+.iconS {
+	width: 16px;
+	height: 16px;
+}

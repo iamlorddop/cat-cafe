@@ -10,6 +10,7 @@ interface TagProps extends Pick<HTMLAttributes<HTMLDivElement>, "className"> {
   size?: "m" | "s";
 }
 
+/** Компонент Тег */
 export const Tag: FC<TagProps> = ({
   text,
   size = "s",

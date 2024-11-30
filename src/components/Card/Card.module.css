@@ -1,12 +1,14 @@
 .box {
 	display: flex;
 	flex-direction: column;
+	max-width: 353px;
+	background: var(--white);
 }
 
 .imgContainer {
 	position: relative;
 	margin-bottom: 20px;
-	max-width: 100%;
+	max-width: 313px;
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	border-radius: 8px;
@@ -22,6 +24,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	border-bottom-left-radius: 0;
 }
 
 .title {

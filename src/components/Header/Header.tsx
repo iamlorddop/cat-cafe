@@ -1,10 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { Logo } from "../Logo";
 import { Button } from "../Button";
 
 import styles from "./Header.module.css";
 
+/** Компонент Титульной панели */
 export const Header = () => {
   const location = useLocation();
 
@@ -13,7 +14,14 @@ export const Header = () => {
       <div className={styles.headerContainer}>
         <Logo />
         {location.pathname === "/" && (
-          <Button text="Купить билет" className={styles.button} />
+          <Link to="/sales">
+            <Button text="Купить билет" className={styles.button} />
+          </Link>
+        )}
+        {location.pathname === "/sales" && (
+          <Link to="/" className={styles.link}>
+            Главная
+          </Link>
         )}
       </div>
     </header>

@@ -11,8 +11,17 @@ interface BoxProps
 }
 
 /** Компонент контейнер */
-export const Box: FC<BoxProps> = ({ size = "s", children, ...props }) => {
-  const boxCls = clsx(styles.box, size === "s" ? styles.boxS : styles.boxM);
+export const Box: FC<BoxProps> = ({
+  size = "s",
+  className,
+  children,
+  ...props
+}) => {
+  const boxCls = clsx(
+    styles.box,
+    size === "s" ? styles.boxS : styles.boxM,
+    className
+  );
   return (
     <div className={boxCls} {...props}>
       {children}

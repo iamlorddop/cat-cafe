@@ -15,57 +15,62 @@ export const MainPage = () => {
   return (
     <>
       <Header />
-      <section className={styles.sectionFirstScreen}>
-        <div className={styles.containerFirstScreen}>
-          <div>
-            <h1 className={styles.titleFirstScreen}>
-              Первое в России котокафе
-            </h1>
-            <p className={styles.text}>
-              Крупнейшее котокафе России, в котором живёт 50 кошек
-              <br />
-              и котов, и каждый из них ищет новый дом. Животных
-              <br />
-              можно гладить, фотографировать, играть с ними.
-            </p>
+      <main>
+        <section className={styles.sectionFirstScreen}>
+          <div className={styles.containerFirstScreen}>
+            <div>
+              <h1 className={styles.titleFirstScreen}>
+                Первое в России котокафе
+              </h1>
+              <p className={styles.text}>
+                Крупнейшее котокафе России, в котором живёт 50 кошек
+                <br />
+                и котов, и каждый из них ищет новый дом. Животных
+                <br />
+                можно гладить, фотографировать, играть с ними.
+              </p>
 
-            <Tag text="Рабочее время с 8:00 до 23:00" className={styles.tag} />
-
-            <div className={styles.label}>
-              <Icon className={styles.icon} />
-              Санкт-Петербург, набережная реки Карповки, дом 5, литера П
-            </div>
-          </div>
-
-          <img src={FirstScreenImage} alt="Котокафе" />
-        </div>
-      </section>
-
-      <section className={styles.sectionCats}>
-        <div className={styles.containerCats}>
-          <h1 className={styles.titleCats}>Наши звезды</h1>
-          <div className={styles.cardsContainer}>
-            {catsData.map((cat) => (
-              <Card
-                key={cat.title}
-                level={cat?.level}
-                markerText={cat?.markerText}
-                title={cat.title}
-                text={cat.text}
-                imgUrl={cat.url}
-                className={styles.card}
+              <Tag
+                text="Рабочее время с 8:00 до 23:00"
+                className={styles.tag}
               />
-            ))}
-          </div>
-          <Link to="/sales">
-            <Button text="Купить билет" className={styles.button} />
-          </Link>
 
-          <img src={Paw} className={styles.pawImage} />
-          <img src={Vector} className={styles.vectorImage} />
-          <img src={Plant} className={styles.plantImage} />
-        </div>
-      </section>
+              <div className={styles.label}>
+                <Icon className={styles.icon} />
+                Санкт-Петербург, набережная реки Карповки, дом 5, литера П
+              </div>
+            </div>
+
+            <img src={FirstScreenImage} alt="Котокафе" />
+          </div>
+        </section>
+
+        <section className={styles.sectionCats}>
+          <div className={styles.containerCats}>
+            <h1 className={styles.titleCats}>Наши звезды</h1>
+            <div className={styles.cardsContainer}>
+              {catsData.map((cat) => (
+                <Card
+                  key={cat.title}
+                  level={cat?.level}
+                  markerText={cat?.markerText}
+                  title={cat.title}
+                  text={cat.text}
+                  imgUrl={cat.url}
+                  className={styles.card}
+                />
+              ))}
+            </div>
+            <Link to="/sales">
+              <Button text="Купить билет" className={styles.button} />
+            </Link>
+
+            <img src={Paw} className={styles.pawImage} />
+            <img src={Vector} className={styles.vectorImage} />
+            <img src={Plant} className={styles.plantImage} />
+          </div>
+        </section>
+      </main>
       <Footer />
     </>
   );

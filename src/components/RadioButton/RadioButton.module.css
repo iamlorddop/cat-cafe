@@ -1,0 +1,23 @@
+.label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.radioButton {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: url("../../assets/radio.svg") 0 0 no-repeat;
+	cursor: pointer;
+}
+
+.label input[type="radio"]:checked+.radioButton {
+	background: url("../../assets/radio-checked.svg") 0 0 no-repeat;
+}
+
+.input {
+	display: none;
+}
